@@ -1,0 +1,2 @@
+# MyStoreAutomation
+Framework for mystore
