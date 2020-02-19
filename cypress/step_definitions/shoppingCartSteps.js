@@ -1,29 +1,10 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
-import { LoginPage } from "../pageObjects/LoginPage";
+import { When, Then } from "cypress-cucumber-preprocessor/steps";
+import { ShoppingCartPage } from "../pageObjects/ShoppingCartPage";
 
-var loginPage = new LoginPage();
+var shoppingCartPage = new ShoppingCartPage();
 
-Given('I open the home page', () => {
-	var url = "http://automationpractice.com/";
-  cy.visit(url)
-});
-
-Given('I open the home page {string}', (url) => {
-	url = "http://" + url + ".com/";
-	cy.visit(url)
+When('I search for dress {string}', (dress) => {
   });
 
-When('I login with email {string} and password {string}', (email, password) => {
-	loginPage.clickLoginButton()
-	loginPage.fillEmail(email)
-	loginPage.fillPassword(password)
-	loginPage.clickSubmit()
-  });
-
-  Then('user should be logged in successfully', () => {
-	loginPage.logoutButtonIsVisible()
-  });
-
-  Then('error message should be visible', () => {
-	loginPage.errorMessageIsVisible()
+  Then('payment page should open successfully', () => {
   });
