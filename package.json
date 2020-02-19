@@ -1,0 +1,30 @@
+{
+  "name": "mywebstore",
+  "version": "1.0.0",
+  "description": "Framework",
+  "main": "index.js",
+  "scripts": {
+	"ng": "ng",
+	"build": "ng build",
+	"lint": "ng lint",
+	"cy:open": "cypress open",
+    "start": "my-server",
+    "cy:run": "cypress run",
+    "cy:ci": "START_SERVER_AND_TEST_INSECURE=1 start-server-and-test start https-get://localhost:3030 cy:run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/hili1231/mystoreautomation/tree/framework"
+  },
+  "author": "Chris Hili",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.0.2",
+    "cypress-cucumber-preprocessor": "^2.0.1"
+  },
+  "cypress-cucumber-preprocessor": {
+	"CommonPath": "common",
+	"step_definitions": "cypress/step_definitions"
+  }
+
+}
