@@ -5,7 +5,7 @@ export class LoginPage {
 	}
 
 	errorMessageIsVisible() {
-		cy.get(`.alert alert-danger`, {timeout:6000}).should('be.visible');
+		cy.get(`#center_column > div.alert.alert-danger`, {timeout:6000}).should('be.visible');
 	}
 
 	getEmailError() {
@@ -31,10 +31,10 @@ export class LoginPage {
 	}
 
 	clickSubmit() {
-		cy.get('[id=SubmitLogin]').click()
+		cy.get('[id=SubmitLogin]').click();
 	}
 
 	clickLoginButton() {
-		cy.get('.login').click()
+		cy.get('.login').click();
 	}
 }

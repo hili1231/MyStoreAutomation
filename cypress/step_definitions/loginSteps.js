@@ -10,7 +10,7 @@ Given('I open the home page', () => {
 
 Given('I open the home page {string}', (url) => {
 	url = "http://" + url + ".com/";
-	cy.visit(url)
+	cy.visit(url, {timeout: 100000})
   });
 
 When('I login with email {string} and password {string}', (email, password) => {

@@ -8,6 +8,6 @@ Feature: Login To Account
 
 	@smoke
 	Scenario: Unsuccessful Login
-		Given I open the home page
+		Given I open the home page 'automationpractice'
 		When I login with email 'chrishili@yopmail.com' and password 'Tester12354'
 		Then error message should be visible

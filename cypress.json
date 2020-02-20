@@ -6,6 +6,8 @@
 	"screenshotsFolder": "cypress/screenshots",
 	"supportFile": "cypress/support",
 	"videosFolder": "cypress/videos",
+	"blackListHosts":
+	"*fonts.gstatic.com",
 	"viewportWidth": 1920,
 	"viewportHeight": 1080
 }
