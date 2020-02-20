@@ -1,6 +1,6 @@
 Feature: Login To Account And Add Item To Cart
 
-	@bsmoke
+	@smoke
 	Scenario: Successful Checkout Logged In
 		Given I open the home page 'automationpractice'
 		When I login with email 'chrishili@yopmail.com' and password 'Tester123'

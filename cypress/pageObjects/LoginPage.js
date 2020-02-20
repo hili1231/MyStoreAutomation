@@ -8,10 +8,6 @@ export class LoginPage {
 		cy.get(`.alert alert-danger`, {timeout:6000}).should('be.visible');
 	}
 
-	visit() {
-		cy.visit('/signin');
-	}
-
 	getEmailError() {
 		return cy.get(`[data-testid=SignInEmailError]`);
 	}
