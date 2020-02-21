@@ -34,9 +34,15 @@ export class ShoppingCartPage {
 		while(itemAmountInCart != amount)
 		{
 			if (itemAmountInCart < amount)
+			{
 			cy.get('"DressLocator".icon-plus').click();
+			itemAmountInCart = cy.get(`.logout`.amount);
+			}
 			else
+			{
 			cy.get('"DressLocator".icon-minus').click();
+			itemAmountInCart = cy.get(`.logout`.amount);
+			}
 		}
 	}
 
