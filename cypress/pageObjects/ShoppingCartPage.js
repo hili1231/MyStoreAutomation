@@ -21,15 +21,15 @@ export class ShoppingCartPage {
 	}
 
 	itemAmountVisibleInCart(items) {
-		itemAmountInCart = cy.get(`.logout`.amount);
-		itemAmountInCart = items;
+		let itemAmountInCart = cy.get(`.logout`.amount);
+		itemAmountInCart === items;
 	}
 
 	updateDressNameToAmountInCart(dressName, amount) {
 		//get dress which requires updating
-		dressLocator = cy.get('li').eq(1).should('contain', dressName)
+		let dressLocator = cy.get('li').eq(1).should('contain', dressName)
 		//get amount for item set in cart
-		var itemAmountInCart = cy.get(`.logout`.amount);
+		let itemAmountInCart = cy.get(`.logout`.amount);
 
 		while(itemAmountInCart != amount)
 		{
@@ -69,7 +69,7 @@ export class ShoppingCartPage {
 	}
 
 	itemAmountVisibleInPage(amount) {
-		var itemAmount = cy.get(`.logout`.amount);
-		itemAmount = amount;
+		let itemAmount = cy.get(`.logout`.amount);
+		return itemAmount === amount;
 	}
 }
