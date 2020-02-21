@@ -37,11 +37,13 @@ export class ShoppingCartPage {
 			{
 			cy.get('"DressLocator".icon-plus').click();
 			itemAmountInCart = cy.get(`.logout`.amount);
+			//check if amount updated otherwise fail test
 			}
 			else
 			{
 			cy.get('"DressLocator".icon-minus').click();
 			itemAmountInCart = cy.get(`.logout`.amount);
+			//check if amount updated otherwise fail test
 			}
 		}
 	}
